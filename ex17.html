@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soma</title>
+</head>
+<body>
+    <form id="meuformulário">                
+        <label for="numero1"> Digite um número</label> <br>
+        <input type="number01" id="numero1">
+
+        <label for="numero2"> Digite um número</label><br>
+        <input type="numbero2" id="numero2"> 
+
+        <button type="button" onclick="enviarDados(numero1.value,numero2.value)"> Enviar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function enviarDados(numero1, numero2){
+            resultado.textContent = parseFloat(numero1) + parseFloat(numero2);
+        }
+    </script>
+    
+</body>
+</html>
