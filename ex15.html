@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificar se é positivo ou negativo</title>
+    <title>Verificar idade</title>
 </head>
 <body>
-    <label for="idade"> Digite um número</label>
-    <input type="number" id="numero">
-    <button onclick="verificarNumero()"> Verificar</button>
+    <label for="idade"> Digite sua idade</label>
+    <input type="number" id="idade">
+    <button onclick="verificarIdade()"> Verificar</button>
     <p id="resultado"></p>
 
     <script>
-        function verificarNumero(){
-            let numero = document.getElementById("numero").value;
+        function verificarIdade(){
+            let idade = document.getElementById("idade").value;
             let resultado = document.getElementById("resultado");
-            if (numero > 0){
-                resultado.textContent = "Número positivo";
+            if (idade >= 18){
+                resultado.textContent = "Maior de idade";
 
-            }else {
-                resultado.textContent = "Número negativo";
+            }else{
+                resultado.textContent = " Menor de idade";
             }
         }
         
