@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exponencial</title>
+</head>
+<body>
+    <form id="meufatorial">                
+        <label for="numero"> Digite um número</label> <br>
+        <input type="number" id="numero">
+
+        <button type="button" onclick="fatorial()"> Fatorial</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function fatorial(){
+            const numero=parseInt(document.getElementById("numero").value);
+            let res =1;
+
+            if (numero < 0){
+                resultado.textContent = "Fatorial não definido para números negativos";
+            } else if (numero == 0  || numero==1){
+                resultado.textContent = 1;
+            } else {
+                for (let i = 1; i <= numero; i++) {
+                    res *= i;
+                }
+                resultado.textContent = res;
+            } 
+        }
+    </script>
+    
+</body>
+</html>
