@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar número primo</title>
+</head>
+<body>
+    <form id="numprimo">                
+        <label for="numero"> Digite um número</label> <br>
+        <input type="number" id="numero">
+
+        <button type="button" onclick="numeroPrimos()"> Verificar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function numeroPrimos(){
+            let primo = true;
+            let numero = parseInt(document.getElementById("numero").value);
+            if (numero <= 1){
+                resultado.textContent = "Números menores ou igual a um não são número primos";
+                primo = false;
+            }else{
+                for (let i = 2; i < numero; i++){
+                    if (numero % i == 0){
+                        resultado.textContent = "Números com divisor não são primos";
+                        primo = false;
+                    } 
+                    if (primo == true)
+                        resultado.textContent = " O número " + numero + " é primo!!!";
+                }
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
